@@ -1,0 +1,83 @@
+*, *::before, *:after{
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.app-header{
+  width: 100%;
+  border-bottom: 3px solid #0D3A90;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.app-header h1{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.add-item{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;;
+}
+
+.add-item button{
+  margin-left: 15px;;
+}
+
+.items{
+  list-style: none;
+  margin: 0 auto; 
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: 15px;
+  max-width: 768px;
+}
+
+.items li{
+  min-height: 150px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  padding: 15px;
+  background: #DEF;
+}
+
+.items li button{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  border-width: 1px;
+  border-color: #bbb;
+  background-color: #DEF;
+  padding: 20px;
+}
+
+.mag-edit{
+  border-top: 3px solid #0D3A90;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.mag-edit div{
+  margin-top: 5px;
+}

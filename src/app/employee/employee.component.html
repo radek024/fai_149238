@@ -1,0 +1,55 @@
+<header class="app-header">
+<h1>{{name}}</h1>
+<ul>
+  <li>ID Magazynu: {{id_mag}}</li>
+  <li>Email: {{email}}</li>
+  <li>Adres: {{address.street}} {{address.flatNo}} {{address.houseNo}} </li>
+  <li>{{address.postalCode}}{{address.city}}</li>
+</ul>
+<div>
+  <button (click)="changeEditMode()">Zmień dane o magazynie</button>
+</div>
+</header>
+
+<section class="add-item">
+  <form (submit)="addTask(task.value)">
+    <div>
+      <label for="taskField">Rzecz: </label>
+      <input type="text" #task id="taskField">
+    </div>
+  </form>
+  
+  <button (click)="addTask(task.value)">Dodaj do magazynu</button>
+</section>
+
+
+
+<ul class="items">
+  <li *ngFor="let task of contains; let i = index">
+    {{i + 1}}. {{task}}
+    <button (click)="deleteTask(task)">Usuń rzecz</button>
+
+  </li>
+</ul>
+
+
+<div *ngIf=editMode class="mag-edit">
+  <h1>Edytuj magazyn:</h1>
+  <form>
+    <div>
+      <label>Nazwa: </label>
+      <input type="text" [(ngModel)]="name" name="name">
+    </div>
+
+    <div>
+      <label>ID Magazynu: </label>
+      <input type="number" [(ngModel)]="id_mag" name="id_mag">
+    </div>
+
+    <div>
+      <label>Email: </label>
+      <input type="text" [(ngModel)]="email" name="email">
+    </div>
+
+  </form>
+</div>
